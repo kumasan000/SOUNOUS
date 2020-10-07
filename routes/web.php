@@ -28,3 +28,11 @@ Route::get('/mypage', function () {
 Route::get('home/test', function () {
     return view('test');
 });
+
+Route::get('/list', 'PostsController@list');
+
+Route::resource('/list', 'PostsController',['only' => ['list','show','create','store']]);
+
+
+
+
